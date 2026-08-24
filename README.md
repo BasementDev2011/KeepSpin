@@ -18,3 +18,8 @@ Use the KeepSpin calibration program, in which you'll press ENTER until the spin
 ./keepspin-calibrate /dev/sr0
 
 All instructions are inside of the program.
+
+To compile them you do your regular
+gcc keepspin.c -o keepspin command on both .c files
+
+If you don't have GCC, simply download the executables (the ones with no extensions)

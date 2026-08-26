@@ -1,4 +1,4 @@
-<img width="698" height="698" alt="KeepSpin" src="https://github.com/user-attachments/assets/72ae57ec-d1e5-46d0-9730-f01d2ce28b07" />
+<img width="300" height="300" alt="KeepSpin" src="https://github.com/user-attachments/assets/72ae57ec-d1e5-46d0-9730-f01d2ce28b07" />
 
 KeepSpin is a simple userspace program that keeps a DVD's spindle motor active to reduce stutter times
 in aggressive spindle optimization firmware devices.

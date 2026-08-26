@@ -14,7 +14,7 @@ This keeps the disc spinning indefinitely until you decide it shouldn't. By simp
 1337 is the random state. This is to prevent the disc from trying to predict the reading position
 Make sure to always place a different random state when using keepspin. Otherwise the bytes that were read and (likely cached)
 Will be simply read back from the cache, thus defeating the entire purpose of making the spindle continue operations, Since
-The byte was grabbed from the cache, and not the disc drive.
+The byte was grabbed from the cache, and not the disc drive. Thus not making the spindle spin the disc
 
 *How do i know how many seconds i need to put for my DVD/CD Drive to not time out?*
 

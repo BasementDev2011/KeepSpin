@@ -28,5 +28,4 @@ gcc keepspin.c -o keepspin command on both .c files
 
 If you don't have GCC, simply download the executables (the ones on /compiled)
 
-I hope that what i made was useful.
 <img width="100" height="100" alt="uma-musume-agnes-tachyon" src="https://github.com/user-attachments/assets/45def0b5-f46c-44a0-afa3-43bf8f0dae0c" />

@@ -1,7 +1,6 @@
 <img width="200" height="200" alt="KeepSpin" src="https://github.com/user-attachments/assets/72ae57ec-d1e5-46d0-9730-f01d2ce28b07" />
 
-KeepSpin is a simple userspace program that keeps a DVD's spindle motor active to reduce stutter times
-in aggressive spindle optimization firmware devices.
+KeepSpin is a simple userspace program that keeps the disc reader drive's spindle active.
 
 How does KeepSpin work?
 It reads a random part of a block device. In this case /dev/sr0, requesting a read of a single byte periodically to reset any timers

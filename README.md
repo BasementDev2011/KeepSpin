@@ -3,29 +3,21 @@
 KeepSpin is a simple userspace program that keeps a DVD's spindle motor active to reduce stutter times
 in aggressive spindle optimization firmware devices.
 
-This keeps the disc spinning indefinitely until you decide it shouldn't. By simply closing the program (Ctrl + C)
+How does KeepSpin work?
+It reads a random part of a block device. In this case /dev/sr0, requesting a read of a single byte periodically to reset any timers
+for timeouts in DVD reading drive firmware. However this program isn't limited by block devices only, it can do other types of
+block devices like /dev/sda1 and so on, alongside files.
 
-*How to use it?*
+How do i use KeepSpin?
+At it's core:
+./keepspinV1.2.x86_64 <block device> <seconds for a periodic random read>
+It's simple to use, However you'll need to know your DVD driver's timeout, For that
+there's the KeepSpin-calibrate program, which will make a random read and when the disc stops spinning
+you'll press enter. Afterwards the program will give you a timeout, and you'll use that.
 
-./keepspin /dev/sr0 25 1337
-
-/dev/sr0 being the block device
-25 being the amount of seconds the program requests a read from the disc drive. (This is to prevent idle states in timeout)
-1337 is the random state. This is to prevent the disc from trying to predict the reading position
-Make sure to always place a different random state when using keepspin. Otherwise the bytes that were read and (likely cached)
-Will be simply read back from the cache, thus defeating the entire purpose of making the spindle continue operations, Since
-The byte was grabbed from the cache, and not the disc drive. Thus not making the spindle spin the disc
-
-*How do i know how many seconds i need to put for my DVD/CD Drive to not time out?*
-
-Use the KeepSpin calibration program, in which you'll press ENTER until the spindle stops spinning.
-./keepspin-calibrate /dev/sr0
-
-All instructions are inside of the program.
-
-To compile them you do your regular:
+To compile the programs you do your regular:
 gcc keepspin.c -o keepspin command on both .c files
 
-If you don't have GCC, simply download the executables (the ones on /compiled)
+If you don't have GCC, simply download the executables (the ones on /compiled-recent)
 
 <img width="100" height="100" alt="uma-musume-agnes-tachyon" src="https://github.com/user-attachments/assets/45def0b5-f46c-44a0-afa3-43bf8f0dae0c" />

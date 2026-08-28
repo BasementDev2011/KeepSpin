@@ -9,7 +9,8 @@ block devices like /dev/sda1 and so on, alongside files.
 
 How do i use KeepSpin?
 At it's core:
-./keepspinV1.2.x86_64 <block device> <seconds for a periodic random read>
+./keepspinV1.2.x86_64 [block device] [seconds for a periodic random read]
+
 It's simple to use, However you'll need to know your DVD driver's timeout, For that
 there's the KeepSpin-calibrate program, which will make a random read and when the disc stops spinning
 you'll press enter. Afterwards the program will give you a timeout, and you'll use that.
